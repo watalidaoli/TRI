@@ -303,7 +303,8 @@ a {
   transition: all 0.5s linear;
 }
 
-#toast{
+#toast,
+#toast2 {
   color: #eee;
   opacity: 0;
   width: 240px;
