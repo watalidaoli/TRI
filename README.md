@@ -52,6 +52,7 @@ Git 仓库：https://github.com/watalidaoli/Tri
   使用promise处理异步程序顺序执行 ... 
   
   这些页面负责将丰富的电影展示给用户
+  
   detail 电影的详细列表
   movie 单个电影信息的预览
   cinema 结合影院信息并显示场次 ...
