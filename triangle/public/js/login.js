@@ -90,7 +90,7 @@
         uname_err.style.display = "none";
         uname_msg.style.opacity = 1;
       }
-      if (umsg[1].trim() == "" || umsg[1].length < 3) {
+      if (umsg[1].trim() == "" || umsg[1].length < 6) {
         // // console.log(umsg[1]);
         upwd_ok.style.display = "none";
         upwd_err.style.display = "block";
@@ -123,12 +123,17 @@
             sessionStorage.setItem("Suname", result.user[0].uname);
           } else {
             // console.log(result,"用户名或者密码错误");
+            var toast2 = document.getElementById("toast2");
+            toast2.style.opacity = 1;
+            setTimeout(function () {
+              toast2.style.opacity = 0;
+            }, 1000)
             return; //
           }
           //成功后跳转
           // alert("跳转到主页...");
-          var toast=document.getElementById("toast");
-          toast.style.opacity=1;
+          var toast = document.getElementById("toast");
+          toast.style.opacity = 1;
           setTimeout(function () {
             location.href = "index.html"; //
           }, 1000);

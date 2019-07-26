@@ -13,7 +13,7 @@
   var judge = document.getElementById("judge"); //提示span的父元素
   var spans = judge.children;
   var judge2 = document.getElementById("judge_tow"); //第二组提示的父元素
-  var spans2 = judge_tow.children;
+  var spans2 = judge2.children; //
   // var suc=document.getElementById("suc");
   var uname_suc = document.getElementById("uname_suc");
   var phone_suc = document.getElementById("phone_suc");
@@ -56,6 +56,10 @@
         ccode_suc.style.opacity = 0;
       }
     }
+    if (uname.value.length < 3) { //用户名双保险
+      uname_suc.style.opacity = 0; //√
+      spans[0].style.opacity = 1;
+    }
   }
   //--页面加载完 触发一次uname的focus
   window.onload = function () {
@@ -79,6 +83,7 @@
         // console.log(result);
         if (this.value.trim() == "") {
           spans[0].style.opacity = 1;
+          uname_suc.style.opacity = 0; //
         } else {
           spans[0].style.opacity = 0;
         }
@@ -204,8 +209,11 @@
         })
     } else {
       // alert("请检查您的注册信息是否合规");
-      toast2.style.opacity = 0;    
+      toast2.style.opacity = 0;
       toast1.style.opacity = 1;
+      setTimeout(function () {
+        toast1.style.opacity = 0;
+      }, 1200)
     }
   }
   //-----事件函数---------------------------------
