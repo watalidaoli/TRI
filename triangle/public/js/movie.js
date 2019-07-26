@@ -128,7 +128,7 @@
   var myd = mydate.getDate();
   // // console.log(myw,mym,myd);
   var html = "";
-  for (var i = 0; i < 7; i++) {
+  for (var i = 0; i < 3; i++) {
     html += `<li><span>${mym}月${myd+i}日 周${week[(myw+i)%7]}</span></li>`;
   }
   date.innerHTML = html;
