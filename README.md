@@ -18,6 +18,7 @@ Git 仓库：https://github.com/watalidaoli/Tri
   6. 订座界面使用自定义属性传参, 以及使用循环创建大量重复片段一次性添加至页面...
 
 服务器：
+
 根据设计的数据库和页面需要的数据内容设计接口
    /movies 全部电影数据
    /moviesItem 单个电影数据
@@ -25,6 +26,7 @@ Git 仓库：https://github.com/watalidaoli/Tri
    /login 登录 ...
    
 数据库：
+
 考虑到订票业务中涉及的数据查询，构建数据库
    用户表 tri_user(用户id 姓名 密码 手机 ...) 
    电影表 tri_movie(电影标题 价格 信息 详情 图片...)
@@ -32,6 +34,7 @@ Git 仓库：https://github.com/watalidaoli/Tri
    订单表 tri_cart(对应用户id 对应电影id 价格 数量 ...)
    
 页面说明：
+
   index：项目主页
   轮播图 侧边栏 下拉菜单 ...
   login/register：登录注册界面
